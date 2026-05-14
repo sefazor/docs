@@ -3,8 +3,8 @@
   "theme": "palm",
   "name": "Tapy Dökümantasyon",
   "colors": {
-    "primary": "#0c26c9",
-    "light": "#eaff26",
+    "primary": "#163300",
+    "light": "#9FE870",
     "dark": "#e1e1e1"
   },
   "navigation": {
@@ -93,11 +93,18 @@
     }
   },
   "description": "Aklınıza takılan soruları ve yanıtlarını bulabileceğiniz dökümantasyon",
-  "fonts": {
-    "family": "Geist"
-  },
   "logo": {
     "light": "/images/logo.svg",
     "dark": "/images/tapy-white.svg"
+  },
+  "favicon": "/images/tapy-main-icon.png",
+  "background": {
+    "color": {
+      "dark": "#201c1c",
+      "light": "#f7f7f7"
+    }
+  },
+  "fonts": {
+    "family": "Google Sans"
   }
 }
