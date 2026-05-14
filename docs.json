@@ -1,0 +1,90 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "palm",
+  "name": "Tapy Dökümantasyon",
+  "colors": {
+    "primary": "#0c26c9",
+    "light": "#eaff26",
+    "dark": "#e1e1e1"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Dökümantasyon",
+        "groups": [
+          {
+            "group": "Başlarken",
+            "pages": [
+              "index",
+              "giris",
+              "hesap-olustur",
+              "hesabini-dogrulama"
+            ]
+          },
+          {
+            "group": "Websitesi Oluşturma",
+            "icon": "pen-swirl",
+            "pages": [
+              "proje/ilk-projeni-olustur",
+              "proje/siteni-anlat",
+              "essentials/settings-copied-3",
+              "proje/basla",
+              "proje/incele",
+              "essentials/settings-copied-6",
+              "proje/sayfa-ekle",
+              "proje/gorseller",
+              "proje/yayinlama",
+              "proje/kontrol",
+              "proje/siten-yayinda"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Destek",
+        "icon": "message",
+        "pages": [
+          "nasil-destek-alirsin"
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Destek",
+        "href": "mailto:destek@tapy.to"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://dashboard.mintlify.com"
+    }
+  },
+  "contextual": {
+    "options": [
+     "copy",
+     "view",
+     "chatgpt",
+     "claude",
+     "perplexity",
+     "mcp",
+     "cursor",
+     "vscode"
+   ]
+  },
+  "footer": {
+    "socials": {
+      "instagram": "https://instagram.com/tapy.to"
+    }
+  },
+  "description": "Aklınıza takılan soruları ve yanıtlarını bulabileceğiniz dökümantasyon",
+  "fonts": {
+    "family": "Geist"
+  },
+  "logo": {
+    "light": "/images/logo.svg",
+    "dark": "/images/tapy-white.svg"
+  }
+}
