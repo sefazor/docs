@@ -1,0 +1,34 @@
+---
+title: "Posta için alan adı ekleme"
+description: "Hesabındaki site domain’inden seçim, postaya ekleme ve sahiplik doğrulamasına hazırlık."
+---
+
+E-posta özelliği **yalnızca bu Tapy hesabına bağlı site alan adlarından** seçim yapmanı bekler. Yani önce projende **özel domain** satın almış veya bağlamış olman gerekir; ardından aynı domain, posta tarafında listelenir.
+
+## Nerede yapılır?
+
+**Domain ve e-posta** ekranında iki bölüm vardır:
+
+- **Site domainleri** — Yayına aldığın projelerin alan adları, DNS ve proje kısayolları.  
+- **E-posta için domainler** — Posta kutusu açacağın domain’leri buradan ekleyip doğrularsın.
+
+Yol: `/workspace/PROJE_ID/email` (proje kimliği adres çubuğunda görünür).
+
+## Adımlar
+
+1. **Hesabındaki alan adı** açılır listeden posta için kullanacağın domain’i seç.  
+2. **“Posta için ekle”** (veya arayüzdeki eşdeğer düğme) ile domaini e-posta listesine al.  
+3. Sistem sana **Adım 1 — sahiplik TXT** kaydını gösterecek; DNS’e ekleyip **Doğrula** dersin ([MX, SPF, DKIM](/eposta/dns-mx-spf-dkim)).
+
+## Liste boş veya “eklenecek domain kalmadı”
+
+- Henüz **site domainin yoksa** önce [Özel alan adı](/domain/ozel-domain) akışını tamamla.  
+- Tüm uygun domainler zaten posta listesindeyse yeni bir site domain’i eklemeden başka seçenek çıkmaz.
+
+<Warning>
+  Domaini posta listesinden **silersen**, o domain için açılmış **tüm posta kutuları ve içerikleri kalıcı olarak** etkilenir; silmeden önce paneldeki uyarıları oku.
+</Warning>
+
+---
+
+Önceki: [PRO plan ve erişim](/eposta/pro-plan-ve-erisim) · Sonraki: [MX, SPF, DKIM](/eposta/dns-mx-spf-dkim)

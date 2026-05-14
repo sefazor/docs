@@ -1,0 +1,44 @@
+---
+title: "Design presetler nedir, nasıl kullanılır?"
+description: "Tapy tasarım ön ayarları: renk ve tipografi tonu, nereden seçilir, kayıt ve projeye nasıl taşınır."
+---
+
+**Design preset** (tasarım ön ayarı), sitenin **renk paleti, tipografi ve genel görsel tonunu** önceden paketlenmiş bir “stil” olarak sunar. Tapy sohbetinde “mavi kurumsal” veya “sıcak minimal” diye sıfırdan tarif etmek yerine, uygun bir preset seçerek üretime **aynı dilden** başlatabilirsin.
+
+## Neden kullanılır?
+
+- İlk çıktının **daha tutarlı** görünmesi (başlık gövde fontları, vurgu renkleri uyumlu).
+- Marka brief’inde “kurumsal lacivert” gibi ifadeler varsa, preset bunu **somut CSS tarafına** yaklaştırır.
+- İstersen sonra sohbette “daha sıcak olsun” diyerek yine değiştirebilirsin; preset bir **başlangıç noktasıdır**, kilit değildir.
+
+## Presetleri nerede bulursun?
+
+1. [tapy.to](https://tapy.to) üzerinde **Tasarım ön ayarları** sayfasına git: [https://tapy.to/tasarim-on-ayarlari](https://tapy.to/tasarim-on-ayarlari)
+2. Sol listeden bir preset seç; sağda **ön izleme** örnek arayüzü güncellenir (açık/koyu gibi seçenekler varsa onları da dene).
+3. Beğendiğin stilde **kayıt ol** veya **devam et** akışına geçersen, seçtiğin stil tarayıcıda güvenli şekilde saklanabilir ve **ilk proje / onboarding** sırasında projene taşınır.
+
+<Note>
+  Preset kataloğu sunucudan gelir; zamanla yeni stiller eklenebilir veya isimler güncellenebilir. Arayüzde gördüğün liste her zaman güncel kabul edilir.
+</Note>
+
+## Projede preset nasıl işler?
+
+- **Yeni proje** açarken URL’de `designStyleId=...` gibi bir parametre görebilirsin; bu, o projede ilk mesajların aynı görsel dilde üretilmesine yardım eder.
+- **Sohbet** tarafında, bazı mesajlarda hangi stilin aktif olduğu arayüzde kısaca gösterilebilir; model yine senin yazdığın metne göre içeriği şekillendirir.
+
+Preset seçmediysen de sorun değil: [Prompt](/proje/prompt) içinde renk ve tipografi tarifini yazarak aynı etkiyi metinle verebilirsin.
+
+## İyi pratikler
+
+1. **Önce preset, sonra uzun brief** — Sade Tabak örneği gibi detaylı bir metin yazıyorsan, preset ile çelişen renk isteme; ya preset’i nötr tut ya da brief’te “preset’i ez, şu paleti kullan” de.
+2. **Koyu / açık** modu marketing ön izlemesinde denedikten sonra kayıt ol; projede tema tercihi için yine sohbetten ince ayar yapılabilir.
+3. Preset “sıkıcı” gelirse sohbette: *“Tipografiyi daha karakterli yap, başlıklarda serif kullan”* gibi net talimat ver.
+
+## Sık soru
+
+**“Preset seçtim, yine de site farklı çıktı.”**  
+Model olasılıksal çalışır; aynı preset + aynı prompt bile küçük farklar üretebilir. Bir sonraki mesajda “hero arka planını krem tonunda tut” gibi somut düzeltme iste.
+
+---
+
+Sıradaki: Hazır metinle devam etmek için [Doğru prompt](/proje/prompt); üretim akışı için [Başlat / ilk üretim](/proje/basla).

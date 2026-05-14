@@ -1,11 +1,39 @@
 ---
-title: "Sayfa Eklemek (Örneğin: Referanslar / SSS / Blog)"
+title: "Sayfa eklemek (Blog, SSS, Referanslar…)"
+description: "Yeni sayfayı sohbetle isteme; menü, slug ve içerik üretimini Tapy’nin yapması."
 ---
 
-İlk siteni oluşturduktan sonra ihtiyaç artabilir.
+İlk üretimden sonra ihtiyaç çoğalır: **Blog**, **Sık sorulan sorular**, **Referanslar**, **Ekip**, **KVKK / Gizlilik** sayfaları gibi. Klasik sistemlerde bunun için menü yöneticisi, şablon seçimi ve boş sayfa açma adımları gerekir; Tapy’de tek yapman gereken **ne istediğini yazmak**.
 
-Mesela: “Referanslar sayfası olsun” “Sık sorulan sorular ekle” “Ekip sayfası yap” “Fiyat paketleri sayfası ekle”
+## Nasıl istersin?
 
-Bu noktada da aynı mantık: “SSS sayfası ekle. 6 soru olsun.
+İyi bir istek şunları içerir:
 
-Ton samimi, kısa kısa cevaplar yaz.” Tapy sayfayı ekler, menüye koyar, içerikleri hazırlar. Senin yine panelde kaybolman gerekmez.
+1. **Sayfa adı** ve menüde görünen etiket  
+2. **İçerik türü** (liste, soru-cevap, kart grid, metin + görsel…)  
+3. **Ton** (resmi, samimi, kısa cevaplar…)  
+4. Varsa **madde sayısı** veya örnek sorular
+
+### Örnek
+
+> “**SSS** sayfası ekle. Menüde ‘Sık sorulanlar’ yazsın. 8 soru olsun; cevaplar iki üç cümleyi geçmesin. Ton samimi olsun. İlk soru: Online görüşme nasıl yapılıyor?”
+
+Tapy genelde sayfayı oluşturur, menüye ekler ve içerikleri doldurur.
+
+## Menü ve adres (slug)
+
+- “Menüde **Hizmetler**’den sonra gelsin” gibi **sıra** talimatı verebilirsin.
+- URL’nin `site.com/sss` gibi olmasını istiyorsan *“slug `sss` olsun”* veya *“adres `/sss` olsun”* diye belirt.
+
+## Mevcut sayfayı bölme veya birleştirme
+
+- “**Hizmetler** sayfasını iki alt sayfaya böl: bireysel ve kurumsal.”
+- “**Blog** ve **Haberler** aynı şey olsun; tek menü maddesi kalsın.”
+
+## İçeriği sonra doldurma
+
+Önce boş iskelet istersen: *“Blog sayfası ekle; şimdilik sadece başlık ve ‘yakında’ metni olsun.”* Sonra yazıları tek tek sohbetle ekletirsin.
+
+---
+
+Görsel zenginleştirme: [Görseller ve içerik dili](/proje/gorseller).

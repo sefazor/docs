@@ -1,0 +1,40 @@
+---
+title: "MX, SPF, DKIM ve doğrulama TXT"
+description: "Sahiplik TXT’si; posta kayıtları; zone dosyası indirme ve DNS yayılımı."
+---
+
+Tapy paneli, seçtiğin domain için **DNS kurulum rehberi** sunar: kayıt tipi, ad (host) ve değerleri tablo halinde gösterir; tek tek **kopyala** veya tüm zone’u dışa aktarabilirsin.
+
+## Adım 1 — Sahiplik (doğrulama TXT)
+
+1. Panelde verilen **TXT** kaydını alan adı sağlayıcının DNS yönetimine ekle.  
+2. Kayıt yayına yayıldıktan sonra panelde **Doğrula**’ya bas.  
+3. Yayılım çoğu zaman **birkaç dakika** sürer; bazen saatler sürebilir — TXT’yi yanlış host’a veya yanlış değerle yazmadığını kontrol et.
+
+Doğrulama başarılı olunca **Adım 2** (posta kayıtları) için rehber açılır.
+
+## Adım 2 — MX, SPF, DKIM
+
+- **MX** — Gelen postanın hangi sunucuya gideceğini söyler; paneldeki öncelik ve hedef değerleri **aynı şekilde** gir.  
+- **SPF (TXT)** — Hangi sunucuların senin adına mail gönderebileceğini tanımlar; tek bir uyumlu SPF satırı kullan.  
+- **DKIM** — İmzalı mail; genelde uzun bir **TXT** değeri ve belirli bir **selector** adı ile gelir.
+
+Mevcut **başka bir posta sağlayıcın** varsa eski MX/SPF kayıtlarıyla çakışma olabilir; geçiş yapıyorsan eski kayıtları kaldırmadan önce kesinti riskini değerlendir.
+
+## Zone dosyası (BIND)
+
+**İndir** veya “zone’u panoya kopyala” seçenekleri **BIND formatında** bir zone dosyası üretir. Cloudflare, Route 53, Namecheap Premium DNS gibi panellerde **“Zone içe aktar”** benzeri özellik varsa toplu yükleme kolaylaşır.
+
+<Note>
+  İçe aktarma sonrası sağlayıcı arayüzünde kayıtların gerçekten oluştuğunu ve site için kullandığın **A/CNAME** kayıtlarının bozulmadığını mutlaka kontrol et.
+</Note>
+
+## Sık sorunlar
+
+- **Doğrulama başarısız:** TXT host adı veya değerde fazladan tırnak, boşluk veya kopyala-yapıştır hatası.  
+- **Mail gelmiyor:** MX yok/yanlış veya hâlâ eski sağlayıcıya gidiyor.  
+- **Spam klasörü:** SPF/DKIM eksik veya yanlış; rehberdeki tüm posta TXT’lerinin yayında olduğundan emin ol.
+
+---
+
+Önceki: [Alan adı ekleme](/eposta/alan-adi-ekleme) · Sonraki: [Posta kutusu](/eposta/posta-kutusu)

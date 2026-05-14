@@ -1,35 +1,42 @@
 ---
-title: "Kodu Domain Paneline Ekle"
+title: "Doğrulama kodunu DNS paneline ekleme"
+description: "Registrar’da TXT veya CNAME kaydı; host, değer ve yayılım süresi."
 ---
 
-Şimdi domain’i aldığın yere (domain sağlayıcına) gideceksin.
+Tapy sana bir **doğrulama kaydı** verdiğinde sıra sende: aynı kaydı domain satın aldığın yerin (**registrar** veya DNS sağlayıcısı) paneline ekleyeceksin.
 
-Genelde yol aynıdır:
+## Genel yol
 
-1. Domain sağlayıcının paneline gir
-2. Domain’i seç
-3. **DNS Ayarları / DNS Management** bölümüne gir
-4. Yeni bir kayıt ekle
+1. Domain sağlayıcının sitesine gir ve oturum aç.  
+2. **Domain listesi**nden bağlayacağın alan adını seç.  
+3. **DNS yönetimi** / **DNS records** / **Bölge düzenleyici** benzeri menüye gir.  
+4. **Yeni kayıt ekle** de.
 
-Tapy’nin verdiği kodu burada kullanırsın.
+## Hangi alanları doldurursun?
 
-> Bu adımda genellikle:
->
-> - Kayıt tipi
-> - Alan (host / name)
-> - Değer (value)\
->   alanlarını girmen yeterlidir.
+Tapy ekranında genelde şunlar yazar:
 
-Merak etme:\
-Bu ekranda “yanlış bir şey yaparsam site uçar mı?” hissi normaldir 🙂\
-Ama bu doğrulama kaydı, mevcut siteni bozmaz.
+- **Tip:** çoğunlukla `TXT` (bazen `CNAME`)  
+- **Ad / Host / Name:** çoğu zaman `@` veya Tapy’nin verdiği alt ad (ör. `_tapy-challenge`)  
+- **Değer / Value / Content:** uzun bir metin veya `key=value` biçiminde doğrulama dizesi
 
-\
-5) “Ekle” De ve Geri Dön
+Sağlayıcıya göre alan adları farklıdır; emin değilsen registrar’ın “TXT kaydı ekleme” yardım sayfasına bak.
 
-DNS kaydını ekledikten sonra yapman gereken tek şey:
+## Yanlış kayıt girersem site bozulur mu?
 
-- Kaydı **kaydetmek**
-- Tapy paneline geri dönmek
+Doğrulama için eklenen **tek bir TXT** kaydı, mevcut web siteni genelde **bozmaz**. Yine de:
 
-Buradan sonrası artık senlik değil.
+- Mevcut **A** veya **CNAME** kayıtlarını silme / değiştirme (özellikle kök domain ve `www` için),  
+- Aynı isimde **çakışan** ikinci TXT varsa dikkat
+
+Tapy panelinde verilen değeri **kopyala-yapıştır** yaparak hata riskini azalt.
+
+## Kaydı kaydettikten sonra
+
+1. Kaydı **kaydet**.  
+2. Tapy paneline dön; gerekirse **Doğrula / Kontrol et** düğmesine bas.  
+3. DNS yayılımı bazen **birkaç dakika ila birkaç saat** sürebilir; sabırlı ol.
+
+---
+
+Sonraki: [Tapy otomatik tarama](/domain/tapy-tarasin) ve [Yayında](/domain/yayinda).

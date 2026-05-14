@@ -1,9 +1,42 @@
 ---
-title: "Yayına Alma Mantığı: “Siten Hazır, Şimdi Gösterelim”"
+title: "Projeyi yayınlama (tapy.dev)"
+description: "Yayın düğmesi, alt alan adı seçimi, yeniden yayın ve paylaşılabilir link."
 ---
 
-Sitenin bir adı olur. Bir de linki. 
+Yayınlamak, siteni **internet üzerinde erişilebilir** bir adrese bağlamaktır. Tapy’de ilk aşamada bunu genelde **`senin-projen.tapy.dev`** formatındaki bir **alt alan adı** ile yaparsın. Bu sayede müşterine, ekibine veya kendine “işte canlı link” diye gösterebilirsin.
 
-İlk aşamada genelde [tapy.](http://tapy.to)dev subdomain’i ile yayına alırsın: [markan.tapy.dev](http://markan.tapy.dev) gibi düşün. Bu aşama şunun içindir: Hızlıca bir şey göstermek. 
+## Yayın düğmesine nereden basılır?
 
-Müşteriye, arkadaşına, ortağına, ekibe… Herkes görür, geri bildirim verir, sen de mesaj atarak düzeltirsin.
+Proje **sohbet / editör** ekranındayken üst araç çubuğunda **Yayınla** (roket ikonu) benzeri bir düğme görürsün. Ön izleme altyapısı hazır değilse düğme geçici olarak pasif olabilir; model üretimi ve sandbox hazır olunca aktifleşir.
+
+## Yayın penceresi (modal) ne yapar?
+
+1. **Alt alan adı** — `ornek.tapy.dev` içindeki `ornek` kısmını belirlersin. Tapy uygunluk kontrolü yapar (başkası kullanıyor mu, yasaklı kelime var mı vb.).
+2. **Onay** — İlk yayında “Yayınla / Deploy”, daha sonra aynı düğme ile **yeniden yayın** (değişiklikleri canlıya alma) yapılabilir.
+3. Arka planda adımlar: hazırlık, derleme, analiz, düzeltme ve dağıtım gibi aşamalar kısa metinlerle gösterilir; hata olursa ekranda uyarı çıkar.
+
+<Note>
+  Yayın CDN üzerinden servis edilir; DNS yayılımı birkaç dakika sürebilir. Çok nadir olarak tarayıcı önbelleği eski sürümü gösterebilir — gizli sekme veya sert yenileme dene.
+</Note>
+
+## tapy.dev linki ne işe yarar?
+
+- **Hızlı paylaşım:** Domain satın almadan önce bile canlı demo verirsin.
+- **Güvenli deneme:** Kendi domain’ine geçmeden önce içeriği son kez kontrol edersin.
+- **HTTPS:** Ziyaretçi tarayıcısı güvenli bağlantı görür (ürün politikasına göre).
+
+## Yayınladıktan sonra değişiklik
+
+Sohbette yaptığın her önemli güncelleme, canlı siteye yansıması için çoğu zaman **yeniden yayın** gerekir. Roket / Yayınla akışını tekrar kullan; kısa süre içinde yeni sürüm aktif olur.
+
+## Sık sorunlar
+
+**“Alt alan adı alınamıyor.”**  
+Başka biri kullanıyor olabilir; kısa ve benzersiz bir slug dene (`marka2025` gibi).
+
+**“Yayın dondu / hata verdi.”**  
+Mesajdaki hatayı oku; devam ederse sayfayı yenileyip tekrar dene. Kalıcıysa [destek@tapy.to](mailto:destek@tapy.to).
+
+---
+
+Sonraki: [Yayın öncesi kontrol](/proje/kontrol) ve kendi domain’in için [Özel alan adı](/domain/ozel-domain).

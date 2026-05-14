@@ -1,0 +1,43 @@
+---
+title: "Kurumsal e-posta (genel bakış)"
+description: "Tapy PRO ile projene bağlı alan adında posta kutusu; nereden yönetilir ve sıralı adımlar."
+---
+
+Tapy, **PRO** plandaki kullanıcılar için seçtiğin **kendi alan adında** (`@markan.com`) e-posta kutuları açmanı sağlar. Bu özellik **site yayınından ayrı** düşünülmelidir: önce domain’in hesabında ve mümkünse sitede doğrulanmış olması gerekir; ardından posta için domain eklenir, **DNS’e MX / SPF / DKIM** kayıtları girilir ve son olarak **posta kutusu** oluşturulur.
+
+## Nereden yönetilir?
+
+Her **proje (workspace)** için ayrı bir e-posta ayarları sayfası vardır. Adres çubuğunda örnek:
+
+`/workspace/PROJE_ID/email`
+
+Projeyi panelden açtıktan sonra **Domain ve e-posta** ekranına git (menüdeki tam ad güncellenebilir; adres çubuğundaki yol `/workspace/.../email` şeklindedir).
+
+<Warning>
+  **Ücretsiz planda** bu ekranın içeriği kısıtlıdır veya yükseltme uyarısı görürsün. E-posta kutusu açmak için **PRO (ücretli)** plan gerekir. Ayrıntı: [PRO plan ve erişim](/eposta/pro-plan-ve-erisim).
+</Warning>
+
+## Doğru sıra (özet)
+
+1. **Site domain’in** olsun: Projede özel domain bağlı veya Tapy üzerinden satın alınmış bir alan adı hesabında görünsün.  
+2. **Posta için domain ekle** — Aynı alan adını “postaya” tanıt.  
+3. **Adım 1 — Sahiplik TXT** ile domaini doğrula.  
+4. **Adım 2 — MX, SPF, DKIM** kayıtlarını DNS paneline ekle.  
+5. **Posta kutusu oluştur** (`info@`, `merhaba@` vb.).  
+6. **Webmail** veya telefonundaki posta uygulaması ile bağlan.
+
+## Site ve posta DNS’i aynı mı?
+
+Genelde **aynı domain** hem web hem posta için kullanılır. DNS panelinde hem **A/CNAME** (site) hem **MX/TXT** (posta) kayıtları bir arada durur. Çakışma yaşamamak için Tapy’nin verdiği **DNS rehberindeki** değerleri aynen kullan; mevcut kayıtları silmeden önce ne işe yaradıklarını kontrol et.
+
+## Sonraki sayfalar
+
+<Card title="PRO plan ve erişim" icon="crown" href="/eposta/pro-plan-ve-erisim" />
+<Card title="Posta için alan adı ekleme" icon="globe" href="/eposta/alan-adi-ekleme" />
+<Card title="MX, SPF, DKIM ve TXT" icon="list-check" href="/eposta/dns-mx-spf-dkim" />
+<Card title="Posta kutusu oluşturma" icon="envelope-open" href="/eposta/posta-kutusu" />
+<Card title="Webmail ve güvenlik" icon="lock-key" href="/eposta/webmail" />
+
+---
+
+Site domain süreci için: [Özel alan adı](/domain/ozel-domain).

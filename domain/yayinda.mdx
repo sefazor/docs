@@ -1,15 +1,29 @@
 ---
-title: "Yayında 🎉"
-icon: "6"
+title: "Domain yayında"
+description: "Doğrulama sonrası HTTPS, kök ve www, tapy.dev ile birlikte kullanım."
+icon: "check-circle"
 ---
 
 Doğrulama tamamlandığında:
 
-- Siten artık kendi domain’inde açılır
-- `tapy.to` linki yerine domain’in çalışır
-- HTTPS (güvenli bağlantı) otomatik olarak aktif olur
+- Siten **kendi domain’inde** açılır (ör. `https://markan.com`).  
+- **HTTPS** (kilit ikonu) genelde otomatik olarak devreye girer; ziyaretçi “güvensiz site” uyarısı görmez.  
+- Panelde hâlâ **tapy.dev** ön izleme linkin olabilir; ikisi aynı projeye bağlı kalabilir (ürün sürümüne göre).
 
-Herhangi ekstra bir şey yapman gerekmez.
+## Tarayıcıda test
 
-Tarayıcıya domain’i yaz → site açılır.\
-Bu kadar.
+1. Gizli sekmede kök domain’i aç.  
+2. `www` ile kök arasında yönlendirme beklenen şekilde çalışıyor mu kontrol et.  
+3. Bir iç sayfayı (ör. `/iletisim`) aç; 404 yok mu bak.
+
+## Sorun giderme
+
+**“DNS doğrulandı ama site açılmıyor.”**  
+Birkaç dakika bekle; farklı DNS sunucusu kullanan cihazdan dene. Hâlâ yoksa kayıtlarda çakışan **A/CNAME** var mı kontrol et.
+
+**“Sertifika / HTTPS hatası.”**  
+Genelde yayılım tamamlanınca düzelir. Uzun sürerse destek e-postasına domain adı ve ekran görüntüsü gönder.
+
+---
+
+Projeye dönüş: [Siten yayında](/proje/siten-yayinda). **PRO** planda aynı domain ile kurumsal posta için: [E-posta](/eposta).

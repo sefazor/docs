@@ -1,19 +1,23 @@
 ---
-title: "Doğrulama Kodu Nedir, Ne İşe Yarar?"
-icon: "3"
+title: "Doğrulama kodu nedir, ne işe yarar?"
+description: "Domain sahipliğini kanıtlamak için TXT veya CNAME doğrulaması; güvenlik mantığı."
+icon: "shield-check"
 ---
 
-Bu kod, Tapy’nin sana şunu sorması gibidir:
+Tapy’ye `senin-markan.com` yazdığında sistem şunu bilmesi gerekir: **Bu domain gerçekten senin kontrolünde mi?**  
 
-> “Bu domain gerçekten senin mi?”
+Bunu ispatın en yaygın yolu, domainin **DNS yönetim paneline** sadece sahibi girebilen özel bir **kayıt** eklemektir. Bu yüzden sana bir **doğrulama kodu** veya hazır **TXT adı / TXT değeri** verilir.
 
-Bunu anlamanın en temiz yolu, domaine küçük bir kayıt eklemektir.\
-Kim domain paneline girip kayıt ekleyebiliyorsa, domain onun demektir.
+## Kod neyi kanıtlar?
 
-İşte bu yüzden sana bir **kod** veririz.
+- Domain DNS’ine kayıt ekleyebiliyorsan, **registrar veya hosting hesabına** erişimin vardır.  
+- Kötü niyetli biri başkasının domain’ini Tapy’ye bağlayamaz (kayıt ekleyemediği sürece).
 
-Bu kod:
+## Tek seferlik ve güvenli
 
-- Tek seferliktir
-- Sadece doğrulama içindir
-- Site içeriğini etkilemez
+- Kod genelde **doğrulama amaçlıdır**; sitenin içeriğini veya e-postalarını değiştirmez.  
+- Doğrulama tamamlanınca istersen kaydı **silme** konusunda registrar dokümantasyonuna bak; bazı sağlayıcılar doğrulama kaydının kalmasını önerir, bazıları silinmesine izin verir.
+
+## Sıradaki adım
+
+Verilen değerleri domain panelinde oluştur: [Kodu DNS’e ekleme](/domain/kodu-ekle).

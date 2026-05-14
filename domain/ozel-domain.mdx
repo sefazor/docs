@@ -1,22 +1,38 @@
 ---
-title: "“Özel Alan Adı” Alanını Bul"
-icon: "2"
+title: "Özel alan adı (domain) bağlama"
+description: "Projede özel domain alanını bulma, yazma ve doğrulama sürecine giriş."
+icon: "globe"
 ---
 
-Proje ayarlarının içinde şu alanı görürsün:
+Kendi **alan adın** (ör. `markan.com`) ile yayın yapmak; ziyaretçiye güven, marka hatırlanabilirliği ve e-posta adreslerinde (`info@markan.com`) tutarlılık sağlar. Tapy’de bu işlem proje ayarlarından başlar ve genelde **DNS’e bir doğrulama kaydı** eklemeyi içerir.
 
-**Özel Alan Adı**
+## Projede alanı bulma
 
-Buradaki input’a, bağlamak istediğin domain’i yazarsın.
+1. İlgili **projeyi** aç (panelden site seç).  
+2. **Ayarlar** veya **Domain / Özel alan adı** bölümüne gir (arayüz sürümüne göre menü adı değişebilir).  
+3. **Özel alan adı** girişine bağlamak istediğin adresi yaz.
 
-Örnekler:
+### Ne yazmalısın?
 
-- `ornekmarka.com`
-- `www.ornekmarka.com`
-- `studioayse.com`
+- Çoğu durumda **kök domain**: `ornekmarka.com`  
+- Nadiren `www.ornekmarka.com` — Tapy veya DNS sağlayıcın www yönlendirmesini yönetebilir; emin değilsen kök domain + dokümantasyondaki notlara uy.
 
-> Tavsiye:\
-> Genelde **www’siz** ana domain (`ornekmarka.com`) yazman yeterlidir.\
-> www yönlendirmeleri otomatik olarak halledilir.
+> **İpucu:** Domain’i henüz satın almadıysan önce bir **registrar**’da (GoDaddy, Natro, Cloudflare Registrar vb.) kaydettir; nameserver veya DNS paneline erişimin olsun.
 
-Domain’i yazdıktan sonra devam ettiğinde, Tapy sana özel bir **doğrulama kodu** üretir
+## Devam ettiğinde ne olur?
+
+Domain’i kaydettikten sonra Tapy sana tipik olarak:
+
+- **Doğrulama kodu** veya TXT/CNAME kaydı bilgisi verir,  
+- Sen bu kaydı **domain panelinde** eklersin,  
+- Tapy **doğrular** ve siteyi o domain’e bağlar.
+
+Ayrıntılar sırayla: [Doğrulama kodu](/domain/dogrulama-kodu) → [Kodu DNS’e ekleme](/domain/kodu-ekle) → [Tapy taraması](/domain/tapy-tarasin) → [Yayında](/domain/yayinda).
+
+## Henüz domain yoksa
+
+Önce [Yayınlama](/proje/yayinlama) ile **tapy.dev** üzerinde çalışır link kullan; domain hazır olunca bu bölüme geri dön.
+
+---
+
+Sıradaki adım: [Doğrulama kodu nedir?](/domain/dogrulama-kodu)

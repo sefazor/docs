@@ -1,19 +1,29 @@
 ---
-title: "Tapy Otomatik Olarak Taramaya Başlar"
-icon: "5"
+title: "Tapy doğrulamayı nasıl tarar?"
+description: "DNS kaydı eklendikten sonra otomatik kontrol ve domain bağlama."
+icon: "radar"
 ---
 
-Doğrulama kaydı eklendikten sonra Tapy:
+DNS kaydını kaydettikten sonra Tapy tarafında tipik akış şöyledir:
 
-- Domain’i otomatik olarak tarar
-- Kodu kontrol eder
-- Domain’in sana ait olduğunu doğrular
-- Ve siteyi o domain’e bağlar
+1. Sistem belirli aralıklarla **DNS’i sorgular**.  
+2. Verdiğin **TXT veya CNAME** değerinin yayına çıkıp çıkmadığını kontrol eder.  
+3. Eşleşme doğruysa domain’i projeye **bağlar** ve yayını tamamlar.
 
-Bu süreç çoğu zaman **birkaç saniye ile birkaç dakika** arasında tamamlanır.
+## Ne kadar sürer?
 
-Bazı domain sağlayıcılarda DNS yayılması biraz daha yavaş olabilir.\
-Bu tamamen normaldir.
+Çoğu zaman **birkaç saniye ila birkaç dakika**. Bazı sağlayıcılarda DNS yayılımı (propagation) **daha uzun** sürebilir; bu normaldir ve Tapy ile ilgili olmayabilir.
 
-> Kısaca:\
-> Sen “ekledim” dersin, Tapy bekler, kontrol eder ve yayına alır.
+## “Hâlâ bekliyor” görüyorsan
+
+- TXT değerinde **fazladan tırnak** veya boşluk kalmadığından emin ol.  
+- Yanlışlıkla **yanlış subdomain**e (ör. `www` yerine kök) mi yazdın kontrol et.  
+- Bir süre sonra Tapy’de **yeniden doğrula** seçeneği varsa kullan.
+
+## Başarılı olunca
+
+Artık site [Yayında](/domain/yayinda) sayfasında anlatıldığı gibi kendi adresinde çalışır.
+
+---
+
+DNS adımları: [Kodu DNS’e ekleme](/domain/kodu-ekle).

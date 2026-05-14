@@ -28,6 +28,7 @@
             "pages": [
               "proje/ilk-projeni-olustur",
               "proje/siteni-anlat",
+              "proje/design-presetler",
               "proje/prompt",
               "proje/basla",
               "proje/incele",
@@ -49,6 +50,18 @@
               "domain/kodu-ekle",
               "domain/yayinda",
               "domain/tapy-tarasin"
+            ]
+          },
+          {
+            "group": "E-posta (PRO)",
+            "icon": "envelope",
+            "pages": [
+              "eposta/index",
+              "eposta/pro-plan-ve-erisim",
+              "eposta/alan-adi-ekleme",
+              "eposta/dns-mx-spf-dkim",
+              "eposta/posta-kutusu",
+              "eposta/webmail"
             ]
           }
         ]
