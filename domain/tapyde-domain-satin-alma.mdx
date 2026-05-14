@@ -1,0 +1,60 @@
+---
+title: "Tapy üzerinden alan adı satın alma"
+description: "Projede domain ara, Stripe ile öde, kayıt ve siteye otomatik bağlama; kimler kullanabilir, ücret kalemleri ve sonrası."
+icon: "cart-shopping"
+---
+
+Tapy panelinden **yeni bir alan adı** arayıp **doğrudan satın alabilirsin**. Ödeme **Stripe** üzerinden alınır; kayıt işlemi arka planda **registrar** (altyapıda Name.com) ile tamamlanır ve domain mümkün olduğunca **satın aldığın projeye** bağlanır. Böylece ayrı bir sitede domain alıp DNS paneline girmek zorunda kalmadan ilerleyebilirsin.
+
+## Kimler kullanabilir?
+
+- **Ücretli plan** (Pro veya Studio) gerekir. Ücretsiz planda bu akış kapalıdır; önce plan yükseltmen istenir.
+- Projeyi **önce web’e yayınlaman** gerekir; özel alan adı (mevcut veya yeni) bağlamadan önce yayın şartı panelde de vurgulanır.
+
+## Nereden başlarsın?
+
+1. İlgili **projeyi** panelden aç.  
+2. **Özel alan adı / Domain** akışına gir (proje detayı veya ayarlardaki **Alan adı bağla** benzeri giriş).  
+3. **“Yeni alan adı satın al”** / **Alan adı kaydı** seçeneğini seç (arayüz metni TR/EN olabilir).  
+4. İstediğin adresi yazıp **uygunluk kontrolü** yap.
+
+Uygun domain seçildiğinde özet ekranda **ödeme** düğmesiyle Stripe’a yönlendirilirsin.
+
+## Ödeme kalemleri (checkout)
+
+Ödeme sayfasında tipik olarak **iki satır** görürsün:
+
+1. **Alan adı kaydı (1 yıl)** — Seçtiğin uzantıya (.com, .net vb.) göre registrar fiyatı; tutar anlık sorguya göre belirlenir.  
+2. **Tapy hizmet bedeli** — SSL ve otomatik DNS yönetimi gibi hizmetler için ayrı bir kalemdir (sunucu yapılandırmasına göre sabit küçük bir USD tutarı olabilir; güncel toplam her zaman **ödeme ekranında** gösterilir).
+
+Para birimi ödeme akışında genelde **USD** olarak işlenir; tahmini toplam, uygunluk sonrası panelde de özetlenebilir.
+
+## Ödeme sonrası ne olur?
+
+- Ödeme onaylandıktan sonra sistem domaini **registrar’da kaydeder** ve hesabında **projeye bağlamayı** dener.  
+- Başarılı olursa domain, projede **bağlı domain** olarak görünür; **HTTPS** ve yönlendirme tarafında Tapy’nin verdiği akışa girersin ([Yayında](/domain/yayinda)).  
+- Registrar tarafında kayıt **başarısız** olursa (ör. domain bir başkası tarafından aynı anda alınmışsa) ödeme tarafında **iade** senaryosu işlenir; bu tür uç durumlarda destekle iletişim kurabilirsin.
+
+Tapy üzerinden alınan domainler veritabanında **registrar DNS’inin Tapy ile uyumlu yönetildiği** kaynakla işaretlenir; panelde **DNS kayıtlarını** listeleyip, uygun olduğunda buradan yönetebilirsin. Ad sunucularını dışarı (ör. yalnızca Cloudflare) taşıdıysan, panelde “DNS buradan yönetilmiyor” benzeri bir uyarı görebilirsin — o durumda site ve posta kayıtlarını **DNS’in gerçekten çözüldüğü yerde** düzenlemen gerekir.
+
+## Mevcut domain bağlamaktan farkı
+
+| | **Tapy’den satın al** | **Zaten sahip olduğun domaini bağla** |
+| --- | --- | --- |
+| Ödeme | Stripe ile Tapy akışında | Registrar’da kendi ödemen |
+| DNS paneli | Çoğu senaryoda Tapy + registrar entegrasyonu | Kendi registrar / DNS sağlayıcın |
+| Doğrulama | Proje akışına göre otomatik veya rehberli | [Doğrulama kodu](/domain/dogrulama-kodu) ve [DNS’e ekleme](/domain/kodu-ekle) |
+
+İki yol aynı projede **kurumsal e-posta** için kullanılabilir: önce site tarafında domain hazır olmalı, sonra [E-posta](/eposta) bölümündeki adımlara geç.
+
+## Sık sorulanlar
+
+**Yenileme (renewal) ne olacak?**  
+Kayıt süresi ve yenileme kuralları registrar tarafındaki ürün politikasına bağlıdır; panelde süre / yenileme bilgisi gösteriliyorsa oradan takip et. Belirsiz kaldığında [destek@tapy.to](mailto:destek@tapy.to).
+
+**Sadece site adresi istiyorum, e-posta yok.**  
+Satın alma yine de site domainini hazırlar; e-posta isteğe bağlıdır ve [ücretli plan](/eposta/pro-plan-ve-erisim) ile açılır.
+
+---
+
+Önceki: [Özel alan adı (genel)](/domain/ozel-domain) · Sonraki: [Doğrulama kodu](/domain/dogrulama-kodu)

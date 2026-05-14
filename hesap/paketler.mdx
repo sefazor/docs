@@ -1,0 +1,63 @@
+---
+title: "Planlar ve paketler"
+description: "Ücretsiz, Pro ve Studio’da neler var; limitler nereden okunur. Fiyatlar değişebilir — güncel tutarlar Planlar sayfasında."
+icon: "crown"
+---
+
+Tapy’de üç ana **hesap planı** vardır: **Ücretsiz (FREE)**, **Pro** ve **Studio**. Aşağıdaki tablo, ürün kodundaki **varsayılan limitleri** özetler; kampanyalar, yıllık/aylık faturalama veya yönetici ayarları bunları değiştirebilir. **Güncel ücret ve paket listesi** her zaman paneldeki **Planlar** sayfasındadır (`/plans`). Ödeme sorunları için ayrıca [Fatura ve abonelik sorunları](/hesap/fatura-ve-abonelik-sorunlari) sayfasına bak.
+
+<Note>
+  Sayılar (`proje sayısı`, `AI kredisi`, `posta kutusu` vb.) ortam değişkeni veya hesabına özel üst sınır ile güncellenebilir. Şüphede kaldığında **Planlar** ekranındaki metinler ve **kota** göstergeleri esas alınır.
+</Note>
+
+## Ücretsiz plan
+
+- **Proje ve yayın:** Varsayılan olarak **1 proje** ve **1 yayınlanmış site** kotası (sunucu / kampanya ayarıyla değişebilir).
+- **AI sohbet kredisi:** Sınırlı dönemsel kredi (varsayılan **2**; sunucu veya kampanya ile güncellenebilir).
+- **Site adresi:** Yayın ve ön izleme genelde **`*.tapy.dev`** alt alan adı üzerinden.
+- **Özel alan adı** (kendi domain’in), **Tapy üzerinden domain satın alma**, **kurumsal e-posta** ve **proje dışa aktarma (ZIP)** gibi özellikler ücretli planlara özeldir; ücretsiz planda bu akışlar kapalı veya yükseltme uyarısı gösterilir.
+- **Destek:** Ücretsiz planda doğrudan destek hattı beklenmez; genel yardım için [dökümantasyon](/) ve [destek kanalı](/nasil-destek-alirsin) kullanılır.
+
+## Pro plan
+
+Ücretli abonelik; **Pro** ve **Studio** aynı ücretli özellik setine (özel domain, e-posta, dışa aktarma vb.) erişir.
+
+- **Proje ve yayın:** Varsayılan **3 proje**, **3 yayınlanmış site** (sunucu veya hesabına özel üst sınır ile değişebilir).
+- **AI kredisi:** Aylık veya yıllık pakete göre dönemsel kota; yıllık pakette toplam kredi genelde daha yüksektir ve sıfırlama aralığı aylık paketten farklıdır. Kesin rakamlar **Planlar** ekranında ve kotâ göstergesinde yer alır.
+- **Özel domain:** Kendi alan adını bağlama; isteğe bağlı [Tapy üzerinden domain satın alma](/domain/tapyde-domain-satin-alma) (ödeme Stripe üzerinden).
+- **Kurumsal e-posta:** [E-posta](/eposta) ile kendi domain’inde posta kutusu; hesap genelinde aktif kutu sayısı plana göre sınırlıdır (varsayılan Pro: **3** kutu; disk ve günlük giden limitler ayrı dokümanda).
+- **Proje dışa aktarma:** ZIP dışa aktarma ücretli planda ve yeterli AI kredisiyle mümkündür (paneldeki maliyet metnine bakın).
+- **Ek AI kredisi:** Planlar / fatura bölümünden **tek seferlik kredi paketleri** (Stripe) satın alınabilir.
+- **Doğrudan destek:** Pro ve Studio için pazarlama ve panel metinlerinde vurgulanır.
+
+Yıllık Pro’da arayüzde ek kampanyalar (ör. promosyon kodu veya standart TLD için domain kaydı avantajı) gösterilebilir; **koşullar ve güncellik** her zaman **Planlar** sayfasındaki açıklamadır.
+
+## Studio plan
+
+Ajans veya çoklu site yönetimi için daha yüksek tavanlar.
+
+- **Proje ve yayın:** Varsayılan **5 proje**, **5 yayın** (sunucu veya hesabına özel üst sınır ile değişebilir).
+- **AI kredisi:** Pro ile benzer şekilde paketlenir; Studio için üst tavanlar envanterden yönetilir.
+- **Özel domain ve e-posta:** Pro ile aynı aile; kurumsal posta için varsayılan **15 aktif kutu** (sunucu veya hesap özelleştirmesi ile değişebilir).
+- **Doğrudan destek:** Pro ile aynı çerçevede sunulur.
+
+## Planı değiştirme ve fatura
+
+- **Planlar / yükseltme:** Panelde **Planlar** (`/plans`) — Stripe Checkout ile Pro veya Studio başlatılır.
+- **Kart ve fatura:** Aktif abonelikte **Stripe müşteri portalı** (paneldeki “ödemeyi yönet” benzeri akış) ile kart güncelleme ve faturalar.
+- **Fiyatlar:** TL/USD gösterimleri kampanya ve vergi bölgesine göre değişir; bu sayfada **tutar yazılmaz** — checkout ekranı bağlayıcıdır.
+- **Ödeme sorunları:** Gecikmiş ödeme, kart reddi, iptal — [Fatura ve abonelik sorunları](/hesap/fatura-ve-abonelik-sorunlari).
+
+---
+
+## Hesabını silmek
+
+Hesap silme, oturum açtıktan sonra **Ayarlar → Profil** içindeki **tehlikeli bölümde** yer alır: onay kutusuna **`DELETE`** yazman gerekir; ardından **Hesabımı sil** ile işlem tamamlanır.
+
+**Ne olur?**
+
+- İşlem **geri alınamaz**. Sunucu, kullanıcı kaydını sildiğinde bağlı veriler (projeler, çalışma alanları, sohbet geçmişi, hesabına bağlı domain kayıtları, e-posta hosting kayıtları vb.) veritabanı ilişkilerine göre **kalıcı olarak** temizlenir.
+- **Stripe:** Aktif aboneliğin varsa, mümkünse silmeden önce **Planlar** üzerinden aboneliği iptal et veya **müşteri portalından** ödeme yöntemini ve dönemi yönet. Hesap silindikten sonra Tapy paneli üzerinden aynı oturumla portala erişemezsin; faturalama sorularında Stripe veya [destek@tapy.to](mailto:destek@tapy.to) gerekir.
+- **Registrar’da satın alınmış alan adı:** Tapy veritabanındaki bağlantı silinse bile, domainin **ICANN / registrar** tarafındaki mülkiyeti ayrıdır. Domaini yönetmeye devam etmek için registrar hesabını veya destek sürecini kullanman gerekebilir.
+
+İlgili: [E-posta planı ve kota](/eposta/pro-plan-ve-erisim) · [Özel alan adı](/domain/ozel-domain) · [Partner programı](/hesap/partner-programi) · [Destek](/nasil-destek-alirsin).

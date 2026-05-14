@@ -1,0 +1,44 @@
+---
+title: "Site analitiği (görüntülenme)"
+description: "Yayınlı sitende günlük ziyaret, kitle dağılımı ve çevrimiçi tahmini; veri nasıl toplanır ve panelde nerede görünür."
+icon: "chart-line"
+---
+
+Yayına aldığın siteler için Tapy, ziyaretçi **görüntüleme (page view)** istatistikleri toplar. Özet grafik ve kitle bilgileri, panelde **proje / site özeti** ekranında (ör. sitenin kartını açtığında) **Analitik** bölümünde yer alır.
+
+## Ne ölçülür?
+
+- **Günlük görüntülenme:** Seçilen sürede (ör. son 7 veya 30 gün) her gün için toplam **görüntüleme** sayısı.
+- **Tekilleştirme:** Aynı ziyaretçinin aynı gün içinde sayfayı birden çok kez yenilemesi, sunucu tarafında **aynı gün + ziyaretçi parmak izi** ile sınırlı sayıda sayılır; bu yüzden metrik “oturum” değil, **yaklaşık günlük benzersiz ziyaret**ye yakındır.
+- **Botlar:** Bilinen bot / tarayıcı otomasyonları mümkün olduğunca **sayılmaz**; trafik insandan ziyade bot ise grafik düşük kalabilir.
+
+## Kitle ve trafik detayı
+
+Panelde (veri olduğunda) şunlara benzer dağılımlar görebilirsin:
+
+- **Ülke** (IP / istek başlıklarından türetilen bölge kodu)
+- **Cihaz tipi** (masaüstü / mobil / tablet benzeri sınıflandırma)
+- **Tarayıcı ve işletim sistemi** (User-Agent ayrıştırması)
+- **Yönlendiren (referrer)** host adı
+- **Sayfa yolu** (`path`) — hangi URL yollarının daha çok görüntülendiği
+- **UTM** kaynakları (kampanya linklerinden gelen `utm_source` / `utm_medium` vb., varsa)
+- **Tahmini çevrimiçi:** Kısa süreli “ping” ile yakın zamanda aktif oturum sayısına dair **tahmini** bir gösterge (kesin eşzamanlı kullanıcı sayısı değildir).
+
+Veri, yayın trafiğinin geçtiği **edge / worker** katmanından güvenli API çağrılarıyla arka uca iletilir; canlı siteyi ziyaret eden gerçek kullanıcılar için anlamlıdır.
+
+## Nerede bulursun?
+
+1. Panelde **Siteler** veya proje listesinden ilgili siteyi seç.  
+2. **Proje özeti / detay** görünümünde **Analitik** kartına bak (grafik ve dönem seçimi).
+
+Mobil uygulamada da benzer dönem seçenekleri (ör. 7 / 30 / 90 gün) ve toplam görüntülenme sunulabilir.
+
+## Sınırlar ve gizlilik
+
+- Metrikler **özet** düzeyindedir; ziyaretçilere ait kişisel veri panelde listelenmez.
+- DNS yayılımı, önbellek veya içerik bloklayıcılar sayıları etkileyebilir.
+- Analitik, siten **yayında** ve ziyaretçi trafiği worker üzerinden ölçülebiliyorsa dolar; taslak veya yalnızca editör ön izlemesi genelde üretim trafiği sayılmaz. Grafik boşsa önce [Yayınlama](/proje/yayinlama) ve [Yayın / ön izleme sorunları](/proje/yayin-onizleme-ve-sorun-giderme) sayfalarına bak.
+
+---
+
+Önceki: [Siten yayında](/proje/siten-yayinda) · Sonraki: [Bitti mi?](/proje/bittimi)

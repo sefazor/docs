@@ -1,18 +1,39 @@
 ---
-title: "PRO plan ve e-posta erişimi"
-description: "Kurumsal posta kutuları hangi planda açılır, kota ve yükseltme."
+title: "Ücretli plan ve e-posta erişimi"
+description: "Kurumsal posta Pro ve Studio’da; kutu sayısı, disk kotası, günlük giden limit ve yükseltme."
 ---
 
-Kurumsal e-posta (kendi domain’inde `@markan.com` kutuları) **yalnızca ücretli PRO plan** ile kullanılabilir. Ücretsiz planda ilgili sayfada **yükseltme** mesajı görürsün; e-posta domain listesi ve kutu oluşturma bu planda devreye girmez.
+Kurumsal e-posta (kendi domain’inde `@markan.com` kutuları) **yalnızca ücretli planlarda** (Pro veya Studio) kullanılabilir. Ücretsiz planda ilgili sayfada **yükseltme** mesajı görürsün; e-posta domain listesi ve kutu oluşturma bu planda devreye girmez. Tüm planların özeti: [Planlar ve paketler](/hesap/paketler).
 
 ## Planı yükseltme
 
 Arayüzdeki **“Planını yükselt”** düğmesi seni planlar sayfasına (`/plans`) yönlendirir. Ödeme ve fatura işlemlerini orada tamamladıktan sonra aynı projede **E-posta** sayfasına dönüp adımlara devam edebilirsin.
 
-## Kota ve limitler
+## Kota ve limitler (teknik özeti)
 
-- **Disk kotası:** Panelde her posta kutusu için kota bilgisi gösterilir; dolunca yeni mail alınamayabilir — uyarı metinleri arayüzde belirtilir.
-- **Kutu sayısı:** Doğrulanmış bir e-posta domain’i için panel metninde genelde **en fazla 3 posta kutusu** ifadesi kullanılır; kurulum veya kampanya döneminde üst sınır değişebilir — güncel değeri her zaman **E-posta** ekranındaki açıklamalardan al.
+Limitler sunucu yapılandırması ve planına göre belirlenir; **E-posta** sayfasındaki sayaç ve uyarılar her zaman önceliklidir. Aşağıdaki tablo, ürün kodundaki **varsayılan** değerleri özetler (yönetici veya ortam değişkenleri bunları değiştirebilir).
+
+### Posta kutusu sayısı (hesap geneli)
+
+- **Ücretsiz (FREE):** Kurumsal posta kutusu **0**.  
+- **Pro:** Varsayılan **en fazla 3** aktif posta kutusu (tüm projelerinde toplam).  
+- **Studio:** Varsayılan **en fazla 15** aktif posta kutusu (yine hesap geneli toplam).
+
+Yeni kutu oluştururken backend, hesabındaki **tüm aktif kutuları** sayar; limite ulaştıysan “planını yükselt” benzeri bir mesaj alırsın. Tek bir projeye özel sayaç değil, **kullanıcı başına** kotadır.
+
+### Her kutunun disk kotası
+
+- Yeni açılan her hesap için posta kutusuna tipik olarak **yaklaşık 1 GB (1024 MB)** depolama kotası atanır (`EMAIL_QUOTA_MB` ortam değişkeni ile sunucuda ayarlanabilir).  
+- Kullanım, altyapı sağlayıcıdan periyodik olarak senkronize edilir; panelde **doluluk yüzdesi** görünür. **Kota dolduğunda** yeni gelen iletiler reddedilebilir veya kutuya alınamayabilir — gereksiz postaları ve büyük ekleri temizlemek gerekir.
+
+### Giden e-posta (günlük)
+
+- Her posta kutusu için giden postada tipik bir **günlük üst sınır** vardır (varsayılan **30** gönderim/gün; `EMAIL_DAILY_SEND_LIMIT` ile sunucuda değiştirilebilir).  
+- Bu limit, spam riskini azaltmak ve altyapı politikasına uymak içindir; toplu kampanya postası göndermek için genelde **harici bir posta servisi** düşünülmelidir.
+
+### Uyarılar
+
+- Disk doluluğu belirli eşiklere gelince **e-posta uyarıları** tetiklenebilir (senkronizasyon birkaç saatte bir çalışır; paneldeki değer anlık olmayabilir).
 
 <Note>
   “Hesabındaki e-posta doğrulama” ([Hesabını doğrula](/hesabini-dogrulama)) ile “kurumsal posta kutusu” farklı şeylerdir: ilki **Tapy hesabına** giriş için; ikincisi **kendi domain’inde** gelen/giden mail içindir.

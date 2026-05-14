@@ -1,0 +1,49 @@
+---
+title: "Formlar ve gelen gönderiler"
+description: "Sitedeki formlardan gelen başvuruların panele düşmesi, e-posta bildirimi, CSV dışa aktarma ve sık sorunlar."
+icon: "paper-plane"
+---
+
+Ziyaretçi sitendeki bir iletişim, randevu veya benzeri formu doldurduğunda veri **Tapy panelinde** toplanır. Gönderiler, proje çalışma alanındaki **Formlar** sayfasında listelenir.
+
+## Nerede görürsün?
+
+1. Panele giriş yap, ilgili **projeyi / workspace’i** aç.  
+2. Sol menüden **Formlar** (veya eşdeğer ad) ile **`/workspace/PROJE_ID/forms`** yoluna git.  
+3. Satırlar tarihe göre sıralanır; bir gönderimi seçerek alanları inceleyebilirsin.
+
+Bu ekranda tipik olarak **toplam gönderi**, dikkat gerektiren doğrulama durumları ve henüz bildirim e-postası işlenmemiş kayıtlar için özet sayaçlar gösterilir.
+
+## E-posta bildirimi
+
+Yeni bir gönderi kaydedildiğinde sistem, kuyruk üzerinden **Tapy hesabının kayıtlı e-posta adresine** kısa bir **“yeni form gönderisi”** bildirimi gönderebilir. Mailde özet alanlar ve panele giden bağlantı bulunur.
+
+- Bildirimler sunucu yapılandırmasına bağlıdır; nadiren kapalı veya gecikmeli olabilir.  
+- **Şüpheli köken** (Origin/Referer uyuşmazlığı vb.) ile işaretlenen gönderilerde bildirim atlanabilir (ortam ayarına göre).  
+- Ziyaretçinin formda bıraktığı **e-posta adresi**, uygun olduğunda yanıt adresi (reply-to) olarak kullanılabilir — ayrıntılar gelen iletide belirtilir.
+
+Gönderi panelde olsa bile gelen kutunu ve **spam** klasörünü kontrol et.
+
+## CSV dışa aktarma
+
+Formlar ekranından gönderileri **CSV** olarak indirebilirsin. Genelde **tüm kayıtlar** veya **son X gün** gibi bir aralık seçilir; indirme tarayıcıdan başlar.
+
+## Güvenlik ve limitler
+
+- Aynı IP / proje için **hız limiti** vardır; aşırı denemede istek **429** ile reddedilebilir.  
+- **Honeypot** ve minimum süre gibi önlemler şablonda kullanılır; botlar genelde elenir.  
+- Gönderilerde **doğrulama durumu** (geçerli, uyarılı, işaretli vb.) saklanır; şüpheli kayıtlar listede ayrıca vurgulanabilir.
+
+Site tarafında formun Tapy API’sine doğru bağlanması gerekir; formu sohbetle eklediysen üretilen kod genelde bu kuralla uyumludur.
+
+## Sık sorunlar
+
+**“Form gönderildi ama panelde yok.”**  
+Yanlış proje workspace’ine bakıyor olabilirsin; URL’deki proje kimliğini kontrol et. Yayın farklı bir projeye bağlıysa gönderiler o projede görünür.
+
+**“Bildirim maili gelmiyor.”**  
+Spam, kurumsal filtrelere takılma veya hesap e-postasının güncel olmaması. [Hesabını doğrula](/hesabini-dogrulama) adımının tamamlandığından emin ol.
+
+---
+
+Önceki: [Yayın ve ön izleme sorunları](/proje/yayin-onizleme-ve-sorun-giderme) · Sonraki: [ZIP ile dışa aktarma](/proje/siteyi-zip-ile-disari-aktarma)

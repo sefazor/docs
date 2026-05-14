@@ -36,9 +36,22 @@
               "proje/gorseller",
               "proje/guncelle",
               "proje/yayinlama",
+              "proje/yayin-onizleme-ve-sorun-giderme",
+              "proje/formlar-ve-gonderiler",
+              "proje/siteyi-zip-ile-disari-aktarma",
               "proje/kontrol",
               "proje/siten-yayinda",
+              "proje/analitikler",
               "proje/bittimi"
+            ]
+          },
+          {
+            "group": "Plan ve hesap",
+            "icon": "crown",
+            "pages": [
+              "hesap/paketler",
+              "hesap/partner-programi",
+              "hesap/fatura-ve-abonelik-sorunlari"
             ]
           },
           {
@@ -46,6 +59,7 @@
             "icon": "globe",
             "pages": [
               "domain/ozel-domain",
+              "domain/tapyde-domain-satin-alma",
               "domain/dogrulama-kodu",
               "domain/kodu-ekle",
               "domain/yayinda",
@@ -53,7 +67,7 @@
             ]
           },
           {
-            "group": "E-posta (PRO)",
+            "group": "E-posta (Pro / Studio)",
             "icon": "envelope",
             "pages": [
               "eposta/index",

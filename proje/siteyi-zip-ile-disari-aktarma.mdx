@@ -1,0 +1,34 @@
+---
+title: "Siteyi ZIP ile dışa aktarma"
+description: "Kaynak kodu arşivi indirme; hangi planda, kredi maliyeti, ZIP içeriği ve sınırlar."
+icon: "file-zip"
+---
+
+Projeyi **ZIP arşivi** olarak indirmek, canlı sitede kullanılan kaynak dosyaların bir kopyasını bilgisayarına almanı sağlar. Bu özellik **ücretli planlarda** (Pro / Studio) açılır; ücretsiz planda panel uyarısı ile yükseltme istenir.
+
+## Nereden başlarsın?
+
+**Proje özeti** ekranında (site kartını açtığında) **dışa aktarma / ZIP** benzeri bir eylem bulunur. Onaydan sonra tarayıcı **`.zip`** dosyasını indirir.
+
+## Kredi maliyeti
+
+Dışa aktarma, **AI kredi kotandan** tek seferlik düşülür. Harcanan miktar sunucu ayarına göre belirlenir; **kesin rakam** her zaman paneldeki onay metninde ve kotâ göstergesinde yazdırılır. Yeterli kredi yoksa işlem başlamaz.
+
+Kredi, dışa aktarma **başarıyla tamamlandıktan sonra** düşülür; ZIP üretilemezse genelde kredi alınmaz.
+
+## ZIP içinde neler var?
+
+- Yayın anlık görüntüsüne dayalı **kaynak dosyalar** (metin, bileşenler, varlıklar).  
+- Projeye yüklenmiş **görseller** gibi ikililer, depodan çekilip arşive eklenir.  
+- **Hariç tutulanlar** arasında tipik olarak `.env`, `node_modules`, derleme çıktıları ve dahili örnek/doküman dosyaları bulunur — böylece arşiv daha küçük ve taşınabilir kalır.
+
+ZIP, Tapy’nin barındırdığı üretim ortamının **bir anlık görüntüsüdür**; harici SaaS anahtarları veya Tapy platformuna özel gizli yapılandırmalar **dahil edilmez**.
+
+## Sınırlar
+
+- Projede henüz **kaynak içerik yoksa** dışa aktarma hata verebilir.  
+- Çok büyük projelerde indirme süresi uzayabilir; oturumun açık kaldığından emin ol.
+
+---
+
+Önceki: [Formlar ve gelen gönderiler](/proje/formlar-ve-gonderiler) · Sonraki: [Yayın öncesi kontrol](/proje/kontrol) · Plan: [Paketler](/hesap/paketler)

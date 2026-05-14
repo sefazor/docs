@@ -1,0 +1,38 @@
+---
+title: "Yayın, ön izleme ve sorun giderme"
+description: "Canlı site ile editör arasındaki fark, yeniden yayın, önbellek ve DNS; neden eski sürüm görüyorum?"
+icon: "arrows-rotate"
+---
+
+Tapy’de **sohbet / editör** içinde gördüğün içerik ile ziyaretçinin **canlı sitede** gördüğü sürüm her zaman aynı anda aynı olmayabilir. Bu sayfa, bu farkın nedenlerini ve pratik çözümleri özetler.
+
+## Canlı site ne demek?
+
+- **tapy.dev adresi** veya bağlı **özel domain**, genelde **yayın (deploy)** tamamlandıktan sonra ziyaretçiye açılır.  
+- İlk kez veya büyük değişikliklerden sonra **Yayınla** akışını tekrar çalıştırman gerekir: [Projeyi yayınlama](/proje/yayinlama).
+
+Özet: Editörde “hazır” hissetsen bile, roket / **Yayınla** ile canlıya almadığın sürece ziyaretçi eski sürümü görür.
+
+## “Eski sürümü görüyorum” — kontrol listesi
+
+1. **Yeniden yayın yaptın mı?** Sohbetle yaptığın değişikliklerin canlıya yansıması için yayın adımını tekrarla.  
+2. **Doğru URL mi?** `www` ile köksüz adres veya özel domain ile `tapy.dev` karıştırılmamalı.  
+3. **Tarayıcı önbelleği:** Gizli sekme dene veya **sert yenileme** (ör. macOS’ta `Cmd+Shift+R`).  
+4. **Kurumsal veya mobil DNS önbelleği:** Bazı ağlar eski IP’yi tutar; farklı ağ veya mobil veri ile dene.  
+5. **Özel domain:** DNS veya SSL yayılımı birkaç dakika ila daha uzun sürebilir; [Yayında](/domain/yayinda) ve [DNS](/domain/kodu-ekle) rehberlerine bak.
+
+## Ön izleme vs canlı
+
+Editör içi ön izleme, dağıtım öncesi **hızlı kontrol** içindir. Piksel birebir aynı olmayabilir; nihai sonuç için her zaman **yayınlanmış URL**’yi referans al.
+
+## CDN ve gecikme
+
+Yayın içerik dağıtım ağı (CDN) üzerinden sunulabilir; güncelleme sonrası **kısa bir gecikme** normaldir. Bir süre sonra hâlâ eski içerik varsa yukarıdaki önbellek adımlarını uygula.
+
+## Ne zaman destek?
+
+Yayın hata veriyor, sürekli başarısız oluyor veya DNS doğrulandığı halde site açılmıyorsa ekran görüntüsü ve domain adıyla [destek@tapy.to](mailto:destek@tapy.to) yaz.
+
+---
+
+Önceki: [Projeyi yayınlama](/proje/yayinlama) · Sonraki: [Formlar ve gelen gönderiler](/proje/formlar-ve-gonderiler) · Analitik: [Site analitiği](/proje/analitikler)

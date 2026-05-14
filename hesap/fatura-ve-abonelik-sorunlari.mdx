@@ -1,0 +1,41 @@
+---
+title: "Fatura ve abonelik sorunları"
+description: "Ödeme gecikmesi, kart güncelleme, Stripe müşteri portalı ve dönem sonu iptali."
+icon: "credit-card"
+---
+
+Ücretli planda abonelik **Stripe** üzerinden yönetilir. Çoğu fatura ve kart işlemi **Planlar** sayfasından (`/plans`) açılan **Stripe müşteri portalı** ile yapılır.
+
+## Ödeme geciktiğinde (past due)
+
+Karttan ücret çekilemediğinde panelde **“Gecikmiş ödeme”** benzeri bir uyarı ve kısa açıklama görürsün. Bu durumda:
+
+1. **Planlar** sayfasına git.  
+2. **Hemen öde** veya **Aboneliği yönet** ile Stripe portalını aç.  
+3. Kart bilgisini güncelle veya Stripe’ın önerdiği adımları tamamla.
+
+Gecikme uzarsa hizmet kesintisi yaşanabilir; mümkün olan en kısa sürede ödemeyi düzeltmen önerilir.
+
+## Kart ve fatura bilgisi
+
+- **Kart ekle / güncelle**, fatura geçmişi ve makbuzlar genelde **Stripe müşteri portalı**ndadır.  
+- Planlar ekranındaki **Yönet** veya **Ödeme yöntemlerini yönet** benzeri düğme seni oraya yönlendirir.
+
+## Aboneliği iptal etme veya dönem sonunda bitirme
+
+- Stripe portalında aboneliği **iptal** veya **dönem sonunda iptal** (cancel at period end) seçenekleri bulunur.  
+- “Dönem sonunda iptal” seçilirse, mevcut fatura dönemi bitene kadar ücretli özellikler açık kalabilir; dönem sonundan sonra hesap **ücretsiz plana** düşer (panel metnine göre).
+
+İptal sonrası **özel domain**, **kurumsal e-posta** ve **ZIP dışa aktarma** gibi ücretli özellikler kapanabilir; verilerin ve domainlerin durumu ürün politikasına bağlıdır — kritik verileri önceden yedekle.
+
+## Ek AI kredi satın alma
+
+Kredi paketleri de Stripe Checkout ile alınır; başarılı ödeme sonrası kredi kotana eklenir. Sorun olursa ödeme sağlayıcısındaki işlem kaydını kontrol et.
+
+## Hesabı tamamen silmek
+
+Abonelikten ayrı düşünülür. Hesap silme, profil ayarlarındaki **tehlikeli bölümde** yer alır; adımlar ve sonuçlar için [Planlar ve paketler](/hesap/paketler) sayfasının **en altındaki** “Hesabını silmek” bölümüne bak.
+
+---
+
+Önceki: [Partner programı](/hesap/partner-programi) · [Planlar ve paketler](/hesap/paketler) · Destek: [Nasıl destek alırsın?](/nasil-destek-alirsin)
