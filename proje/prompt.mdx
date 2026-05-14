@@ -1,20 +1,82 @@
 ---
-title: "Website Promptu (Brief) Nasıl Yazılır?"
-icon: "2"
+title: "Doğru prompt (brief) nasıl yazılır?"
+description: "Tapy sohbetinde etkili talimat: yapı, örnek metin, sık hatalar ve tekrar düzenleme."
+icon: "message-lines"
 ---
 
-Korkutucu gelen kısım burası gibi görünebilir ama aslında en keyifli kısım da burası: Çünkü “site yaptırmak” ilk kez sohbet gibi hissettirir. 
+Tapy’de site “kod yazarak” değil **konuşarak** üretilir. Model senin yazdığın metni bir **brief** gibi okur. Bu yüzden “doğru prompt” demek çoğu zaman: **doğru bağlamı** tek seferde vermek demektir.
 
-Bir prompt yazarken şu parçalar iyi çalışır: 
+## Altın kural
 
-✅ Kim olduğunu söyle “Ben …, … işini yapıyorum” “Şirketim / markam …” 
+> **Kısa ama eksiksiz.**  
+> Uzun lafın gerekmediği yerde maddeler; duygusal tonun önemli olduğu yerde bir iki cümle hikâye.
 
-✅ Ne sunduğunu yaz Hizmetlerin / ürünlerin Eğer çok fazlaysa 4–6 madde yeter
+## Şablon: kopyalayıp doldur
 
-✅ İletişim bilgilerini ekle Telefon, e-posta, adres WhatsApp varsa belirt 
+Aşağıdaki iskeleti kendi işine göre doldurup ilk mesaj olarak yapıştırabilirsin:
 
-✅ Stil tercihini belirt “Minimal”, “kurumsal”, “lüks”, “samimi”, “modern” 2–3 kelime yeter 
+```text
+Ben [isim]. [Şehir/ilçe]’de [iş/marka adı] ile [ne iş yapıyorum] yapıyorum.
 
-✅ Hedefini söyle “Randevu almak istiyorum” “Teklif formu olsun” “WhatsApp’tan yazsınlar” “Portfolyo göstermek istiyorum” 
+Sitem [kimler için]: [hedef kitle].
 
-Bu kadar. Tapy için iyi prompt şudur: “Aşırı uzun” değil, “yeterince net” olan.
+Sunum:
+- [hizmet/ürün 1]
+- [hizmet/ürün 2]
+- [hizmet/ürün 3]
+
+Ziyaretçi sitede şunu yapsın: [ör. WhatsApp’tan yazsın / randevu formu doldursun / portfolyomu görsün].
+
+İletişim:
+- Telefon: [+90 …]
+- E-posta: […@…]
+- Adres: […]
+
+Görünüm: [ör. modern, minimal, sıcak, fotoğraf ağırlıklı, koyu arka plan].
+```
+
+## Gerçekçi bir örnek
+
+Aşağıdaki metin, iyi bir ilk website promptu örneğidir:
+
+<Frame>
+“Ben Deniz. Kadıköy’de ‘Deniz Pilates Studio’ adında bir pilates stüdyom var. Reformer pilates, hamile pilatesi ve birebir dersler veriyoruz. Sitem kurumsal ama sıcak dursun, modern ve minimal olsun. Renkler açık tonlar, beyaz ağırlıklı, fotoğraflar büyük kullanılsın. Ana hedefim randevu almak; WhatsApp butonu ve iletişim formu olsun. Adres: Caferağa Mah. Kadıköy/İstanbul. Telefon: +90 5xx xxx xx xx. E-posta: hello@denizpilates.com.”
+</Frame>
+
+Bu seviyede bir metinle Tapy genelde **yayına yakın** bir ilk çıktı üretir; sonra ince ayar mesajlarıyla cilalarsın.
+
+## Parça parça da yazabilirsin
+
+Her şeyi tek mesajda vermek zorunda değilsin:
+
+1. İlk mesajda kimlik + hedef + iletişim,
+2. İkinci mesajda “şu sayfayı da ekle”, “renkleri şöyle değiştir”.
+
+Ancak çok parçalarsan model önceki bağlamı biraz “unutabilir”; önemli bilgileri **tekrar kısaca** hatırlatmak iyi olur.
+
+## Dosya ve görsel ekleme
+
+Sohbette dosya veya ekran görüntüsü ekleyebilirsen (ürün izin veriyorsa), “şu görseldeki gibi bir hero istiyorum” demek çıktıyı güçlendirir. Görsel politikası planına göre değişebilir; ekleyemiyorsan metinle tarif et.
+
+## Sık yapılan hatalar
+
+| Hata | Sonuç |
+|------|--------|
+| “Site yap” tek başına | Genel, sıkıcı şablon |
+| Onlarca sayfa ismi tek seferde | Model bir kısmını atlar |
+| Çelişen dil (hem çocuk hem lüks otel) | Tutarsız tasarım |
+| İletişim bilgisi yok | Placeholder metin kalır |
+
+## Model yanıldıysa
+
+Sakin ol; sohbette net talimat ver:
+
+- “Üst menüde sadece Ana Sayfa, Hizmetler, İletişim olsun.”
+- “İletişim formunda telefon alanı zorunlu olsun.”
+- “Ana sayfadaki ikinci bloktaki metni kısalt.”
+
+Bazen **tek cümle** yeter; bazen “önceki öneriyi unut, şunu yap” demen gerekir.
+
+---
+
+Sonraki adımlar: [Başlat / ilk üretim](/proje/basla) ve [Ön izleme](/proje/incele).

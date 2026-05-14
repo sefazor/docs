@@ -18,7 +18,8 @@
               "index",
               "giris",
               "hesap-olustur",
-              "hesabini-dogrulama"
+              "hesabini-dogrulama",
+              "sifre-unuttum"
             ]
           },
           {
@@ -27,15 +28,27 @@
             "pages": [
               "proje/ilk-projeni-olustur",
               "proje/siteni-anlat",
-              "essentials/settings-copied-3",
+              "proje/prompt",
               "proje/basla",
               "proje/incele",
-              "essentials/settings-copied-6",
               "proje/sayfa-ekle",
               "proje/gorseller",
+              "proje/guncelle",
               "proje/yayinlama",
               "proje/kontrol",
-              "proje/siten-yayinda"
+              "proje/siten-yayinda",
+              "proje/bittimi"
+            ]
+          },
+          {
+            "group": "Alan adı (domain)",
+            "icon": "globe",
+            "pages": [
+              "domain/ozel-domain",
+              "domain/dogrulama-kodu",
+              "domain/kodu-ekle",
+              "domain/yayinda",
+              "domain/tapy-tarasin"
             ]
           }
         ]
@@ -58,8 +71,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Tapy'ye git",
+      "href": "https://tapy.to"
     }
   },
   "contextual": {

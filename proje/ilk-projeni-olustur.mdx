@@ -1,5 +1,79 @@
 ---
-title: "İlk Projeni Oluştur"
-description: "Tapy’de bir website oluşturmak, klasik “tema seç – düzenle – kaydet – yayınla” döngüsünden farklı. Burada süreç daha doğal: Sen anlatırsın, Tapy yapar. Bir web sitesi yaptırırken en çok vakit alan şey genelde “başlamak”tır: Ne yazacağım? Nereden gireceğim? Hangi şablonu seçmem gerekiyor? Görsel nerede? Menü nasıl olacak? Tapy bu yükü sırtından alır. Sen sadece ne istediğini söylersin. Tapy de bunu yayına hazır bir website haline getirir. Aşağıdaki adımlar, ilk siteni sıfırdan çıkarıp yayına alacağın, gerçek bir “ilk kurulum” rehberi."
-icon: "0"
+title: "İlk projeni oluştur"
+description: "Panel, workspace, onboarding ve ilk sohbet mesajı ile Tapy’de site projesi açma."
+icon: "folder-plus"
 ---
+
+Tapy’de ürettiğin her web sitesi bir **proje** (workspace) olarak yaşar. Projenin kendi **sohbeti**, **ön izlemesi**, **yayın adresi** ve ayarları vardır. Bu sayfa; hesabın hazır olduktan sonra **ilk projeyi** nasıl açacağını adım adım anlatır.
+
+## Ön koşullar
+
+- [Hesap oluşturma](/hesap-olustur) tamamlanmış olmalı.
+- E-posta ile kayıt olduysan [doğrulama](/hesabini-dogrulama) bitmiş olmalı; aksi halde panelde veya girişte kısıtlamalarla karşılaşabilirsin.
+
+## Panele nasıl girilir?
+
+1. [tapy.to](https://tapy.to) üzerinden **Giriş yap**.
+2. Oturum açıldıktan sonra çoğu kullanıcı için adres **`/app`** veya **`/app/sites`** çevresinde döner:
+   - **`/app`**: Hesabında proje varsa son kullandığın workspace özetine benzer bir ekran açılabilir.
+   - **`/app/sites`**: Tüm projelerinin listelendiği **siteler** görünümüdür; yeni proje açma ve hızlı oluşturma burada da bulunur.
+
+Menüde **Siteler** / **Projeler** benzeri bir bağlantı gördüğünde buraya gidebilirsin.
+
+## İlk proje: iki yaygın yol
+
+### A) Onboarding sihirbazı (“Yeni workspace”)
+
+Hesabında **hiç proje yoksa** panel genelde sana boş bir durum gösterir ve **Yeni workspace** / **İlk siteni oluştur** tarzı bir düğme sunar. Bu seni **`/onboarding`** akışına götürür.
+
+Onboarding tipik olarak şunları toplar:
+
+- **İşin / sitenin adı ve kısa özeti** — ne yaptığını net yazmak, sonraki sohbette Tapy’nin doğru şekilde üretmesine yardım eder.
+- **Konum, sektör, iletişim** gibi alanlar (adımlar ürün sürümüne göre değişebilir).
+- İstersen bir **şablon** veya başlangıç stili seçimi.
+
+Sihirbaz bittiğinde sistem senin için projeyi oluşturur ve çoğu zaman **sohbet + ön izleme** ekranına geçirir.
+
+### B) Hızlı oluşturma (mesajla direkt başlat)
+
+**Siteler** (`/app/sites`) ekranında, altta veya üstte **ilk mesajını yazarak** proje açabileceğin bir alan bulunabilir. Buraya örneğin şunu yazarsın:
+
+> “Kadıköy’de küçük bir kahve dükkanı için tek sayfalık site; menü, adres, harita ve WhatsApp butonu olsun.”
+
+**Gönder** dediğinde:
+
+- Sistem yeni bir **workspace** oluşturur,
+- Seni o projenin **sohbet ekranına** yönlendirir; mesajın sohbette ilk kullanıcı mesajı olarak düşer ve model üretime başlar.
+
+<Note>
+  Planına göre **aynı anda açık tutabileceğin proje sayısı** sınırlı olabilir. Limit dolduğunda “yeni workspace” düğmesi pasifleşebilir; mesajda limit uyarısı görürsün. Çözüm: eski projelerden birini arşivle veya ücretli plana geç.
+</Note>
+
+## Ana sayfadan gelen “bekleyen” taslak
+
+[tapy.to](https://tapy.to) ana sayfasında misafir olarak yazdığın metin, kayıt sonrası bazen **otomatik olarak** ilk proje kutusuna taşınır (tarayıcıda güvenli şekilde saklanan taslak). Böylece kayıt → panel akışında metni yeniden yazmak zorunda kalmazsın.
+
+## Tasarım stili (preset) seçtiysen
+
+Tasarım denemeleri sayfasında bir **stil / preset** seçip kayıt olduysan, bu bilgi de ilk projeye aktarılabilir. Preset; renk ve tipografi gibi görsel tonu etkiler — detaylı anlatım için ileride **Design presetler** sayfasına bakacaksın.
+
+## Proje açıldıktan sonra ekranda ne görürsün?
+
+- **Sohbet:** Solda veya altta mesaj geçmişi; yeni isteklerini buraya yazarsın.
+- **Ön izleme:** Site canlı güncellenir; model dosya ekledikçe burada görürsün.
+- **Yayın / ayarlar:** Yayına alma ve domain gibi işler menüden devam eder — [Yayınlama](/proje/yayinlama) ve [Domain](/domain/ozel-domain) bölümlerinde genişleteceğiz.
+
+## Sık sorunlar
+
+**“Yeni workspace tıklanmıyor.”**  
+Proje limitine gelmiş olabilirsin. Mevcut projelerden kullanmadıklarını kapat veya plan yükselt.
+
+**“Mesaj gönderdim, dönüş yok.”**  
+Ağ veya kredi / kota kaynaklı olabilir; hata balonuna bak. Devam etmiyorsa sayfayı yenilemeden önce bir süre bekle (üretim uzayabilir).
+
+**“Onboarding’de takıldım.”**  
+Zorunlu alanları doldur; geri düğmesiyle önceki adıma dönüp tekrar dene. Hata sürerse destek e-postasına ekran görüntüsü ile yaz.
+
+---
+
+Sonraki okuma: siteni nasıl tarif edeceğin — [Siteni anlat](/proje/siteni-anlat) ve iyi örnek prompt için [Örnek prompt](/proje/prompt).
